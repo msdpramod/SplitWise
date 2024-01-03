@@ -11,10 +11,11 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<User, String> {
 
 
-    //Optional<User> findById(Long aLong);
+    Optional<User> findById(Long aLong);
 
     Optional<User> findByPhoneNumber(String phone);
 //    findByFirsName(String name);
 
-    User save(User user);
+    @Override
+    <S extends User> S save(S entity);
 }

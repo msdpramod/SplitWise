@@ -32,7 +32,13 @@ public class RegisterUserCommand implements Command{
         String password = inputList.get(1);
         String phoneNumber = inputList.get(2);
         String userName = inputList.get(3);
-        RequestRegisterUserDTO requestRegisterUserDTO = new RequestRegisterUserDTO();
+        RequestRegisterUserDTO request = new RequestRegisterUserDTO();
+        request.setPassword(password);
+        request.setPhoneNumber(phoneNumber);
+        request.setUserName(userName);
+
+
+        userController.registerUser(request);
 
     }
 }

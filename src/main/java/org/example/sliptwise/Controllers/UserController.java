@@ -10,16 +10,13 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 public class UserController {
-    private RegisterUserService registerUserService;
+    final private RegisterUserService registerUserService;
     @Autowired
     public UserController(RegisterUserService registerUserService) {
         this.registerUserService = registerUserService;
     }
-
     public ResponseRegisterUserDTO registerUser(RequestRegisterUserDTO requestRegisterUserDTO) {
-        String userName= requestRegisterUserDTO.getUserName();
-        String password= requestRegisterUserDTO.getPassword();
-        String phoneNumber= requestRegisterUserDTO.getPhoneNumber();
+
         User user;
         ResponseRegisterUserDTO response = new ResponseRegisterUserDTO();
         try {

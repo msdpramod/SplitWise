@@ -27,7 +27,7 @@ public class RegisterUserService {
                 user.setUserStatus(UserStatus.ACTIVE);
                 user.setName(userName);
                 user.setPassword(password);
-                userRepository.save(user);
+                return userRepository.save(user);
 
             }
 

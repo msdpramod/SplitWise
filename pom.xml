@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.example</groupId>
-    <artifactId>SliptWise</artifactId>
+    <artifactId>SplitWise</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>SliptWise</name>
     <description>SliptWise</description>

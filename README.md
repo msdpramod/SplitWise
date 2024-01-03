@@ -1,4 +1,5 @@
 Create an Expense Sharing Application
+
 Requirements
 Users can register and update their profiles
 A user's profile should contain at least their name, phone number and password

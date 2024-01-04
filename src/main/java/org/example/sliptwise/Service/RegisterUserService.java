@@ -18,7 +18,7 @@ public class RegisterUserService {
     }
 
     public User registerUser(String userName, String password, String phoneNumber) throws UserExeception {
-        Optional<User> userOptional = userRepository.findByPhoneNumber(phoneNumber);
+        Optional<User> userOptional = userRepository.findByPhone(phoneNumber);
         if (userOptional.isPresent()) {
             if (userOptional.get().getUserStatus().equals("ACTIVE")) {
                 throw new UserExeception("User already exists");
@@ -33,7 +33,7 @@ public class RegisterUserService {
 
         }
         User user = new User();
-        user.setPhoneNumber(phoneNumber);
+        user.setPhone(phoneNumber);
         user.setName(userName);
         user.setPassword(password);
         user.setUserStatus(UserStatus.ACTIVE);
